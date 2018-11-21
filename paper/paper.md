@@ -19,26 +19,25 @@ preserving data provenance and security
 [@fa18-523-56-www-nifi-nifihomepage]. NiFi provides the ability to
 build or alter an ETL flow with a few clicks. NiFi builds Gets,
 Converts, and Pulls in a GUI and allows the user to build and
-customize the flow [@fa18-523-56- www-nifi-issartetlsimple]. This
+customize the flow [@fa18-523-56-www-nifi-issartetlsimple]. This
 flexibility and usability is key to NiFi's value in a big data world
 where stovepipes and inflexibility are frequently challenges.
 
 NiFi is a tool for:
 
 * Moving data between systems, including modern systems such as social
-  media sources, AWS cloud server, Hadoop, MongoDB, and so on[@www-fa18-523-56-udemy-nifi]
+  media sources, AWS cloud server, Hadoop, MongoDB, and so on
+  [@www-fa18-523-56-udemy-nifi]
 * Delivering data to analytics platforms[@www-fa18-523-56-udemy-nifi]
 * Format Conversion, extracting/parsing data[@www-fa18-523-56-udemy-nifi]
 * Data or files routing decisions[@www-fa18-523-56-udemy-nifi]
 * Real-time data streaming[@www-fa18-523-56-udemy-nifi]
-
 
 NiFi is not recommended for:
 
 * Distributed Computation[@www-fa18-523-56-udemy-nifi]
 * Complex Event Processing[@www-fa18-523-56-udemy-nifi]
 * Join/ Aggregated Functions[@www-fa18-523-56-udemy-nifi]
-
 
 ## Big Data Challanges and NiFi  
 
@@ -106,47 +105,50 @@ NiFi's main features are:
  
 * *Guaranteed delivery*: use purpose-built persistent write-ahead log
   and content repository to ensure guaranteed delivery in an effective
-  way[@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+  way[@@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 * *Web-based user interface*: easy to use web-based GUI with drag and
   drop features that allows users to build, schedule, control, and
-  monitor dataflow[@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+  monitor dataflow[@@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 * *Provenance*: provide ability to track data flows through the
-  systems with audit trail and traceability functionalities[@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+  systems with audit trail and traceability functionalities
+[@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 * *Queue Prioritization*: provide the ability to configure and
-  prioritize job flow and determine the order of events[@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+  prioritize job flow and determine the order of events
+[@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 * *Secure*: provide and support multiple security protocols and
-  encryptions, as well as authorization management[@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+  encryptions, as well as authorization management
+[@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 * *Extensibility*: provide flexibility by allowing pre-built and
-  built-your-own extension the be integrated[@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+  built-your-own extension the be integrated
+[@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 * *Scalability*: supports scale-out by clustering architecture as well
-as scale-up and scale-down [@www-nifi]
-[@fa18-523-56-www-nifi-homepagetechdoc].
+as scale-up and scale-down [@fa18-523-56-www-nifi-nifihomepage]
+[@fa18-523-56-www-nifi-homepagetechdoc]
 
- 
 ## NiFi Architecture
 
-The NiFi homepage +@fig:nifiarchitecture  shows the main components in NiFi architecture.
++@fig:nifiarchitecture shows the main components in NiFi architecture.
 
-![NiFi Architecture](images/nifi_architecture.PNG)
-{#fig:nifiarchitecture}[fa18-523-56-www-nifi-homepagetechdoc]
+![NiFi Architecture [@fa18-523-56-www-nifi-homepagetechdoc]]
+(images/nifi_architecture.PNG){#fig:nifiarchitecture}
 
 From the top down, NiFi is web browser accessible by a NiFi hosted Web
 Server. NiFi processor operations are managed through the Flow
 Controller and the three repositories; FlowFile, Content, and
 Provenance work to process data on and off disk and in a NiFi flow.
 NiFi is hosted in the Java Virtual Machine environment or JVM
-[fa18-523-56-www-nifi-homepagetechdoc].
+[@fa18-523-56-www-nifi-homepagetechdoc].
 
 ### Web Server
 
 NiFi's easy-to-use graphic user interface(GUI) is hosted on the Web
-Server within the JVM [fa18-523-56-www-nifi-homepagetechdoc].
+Server within the JVM [@fa18-523-56-www-nifi-homepagetechdoc].
 
 ### Flow Controller
 
@@ -159,8 +161,8 @@ and managed through the Flow Controller
 
 Files in an active NiFi flow are tracked in a write ahead log so that
 as data moved through the flow NiFi can keep track of what is known
-about files as they pass
-through[@fa18-523-56-www-nifi-homepagetechdoc].
+about files as they pass through 
+[@fa18-523-56-www-nifi-homepagetechdoc].
 
 ### Content Repository
 
@@ -180,7 +182,7 @@ provenance data about flows is indexed to enable search of the records
 
 NiFi provides more than 260 processors and more than 48 controller
 services for users to integrate into a flow from the graphic user
-interface(GUI) of Nifi[@fa18-523-56-www-nifi-creatingprocessors].
+interface(GUI) of Nifi [@fa18-523-56-www-nifi-creatingprocessors].
 Processors are base on underlying controller services in the java
 virtual machine. Controller services can be centered around a security
 implementation, database CRUD (create, read, updates, and deletes),
@@ -192,7 +194,8 @@ service as well [@fa18-523-56-www-nifi-creatingprocessors].
 
 * **Get**
 
-  * Examples: GetFTP, GetMongo, GetTCP, etc. [@fa18-523-56-www-nifi-homepagetechdoc]
+  * Examples: GetFTP, GetMongo, GetTCP, etc. 
+  [@fa18-523-56-www-nifi-homepagetechdoc]
   * Similar input type processors: Consume, Extract, Fetch, Listen, etc.
 
 Nifi provides dozens of *Get* processor options and many other similar
@@ -204,7 +207,8 @@ increments for polling and timeouts, set proxy settings, and more
 
 * **Convert**
 
-  * Examples: ConvertJSONToSQL, Convert Record, ConvertExceltoCSVProcessor, etc. [@fa18-523-56-www-nifi-homepagetechdoc]
+  * Examples: ConvertJSONToSQL, Convert Record, ConvertExceltoCSVProcessor,
+  etc. [@fa18-523-56-www-nifi-homepagetechdoc]
   * Similar transformation type processors: Evaluate, Merge, Split, etc. 
 
 Once data is in the flow, NiFi provides dozens of processors to
@@ -215,7 +219,8 @@ the flow [@fa18-523-56-www-nifi-homepagetechdoc].
 
 * **Put**
 
-  * Examples: PutFile, PutFTP, PutSQL, PutElasticSearch, PutAzureBlobStorage, etc. [@fa18-523-56-www-nifi-homepagetechdoc]
+  * Examples: PutFile, PutFTP, PutSQL, PutElasticSearch, PutAzureBlobStorage,
+  etc. [@fa18-523-56-www-nifi-homepagetechdoc]
   * Similar output type processors: Publish, etc. 
 
 A critical part of a flow in NiFi is pushing the right data out of the
@@ -229,13 +234,14 @@ configuration options based on the destination type
 ### NiFi Clusters
 
 NiFi can also be integrated with ZooKeeper to operate within a
-cluster. +@fig:nificlusterarchitecture
-[fa18-523-56-www-nifi-homepagetechdoc] shows how ZooKeeper manages
+cluster. +@fig:nificlusterarchitecture shows how ZooKeeper manages
 NiFi's nodes by determining primary node, Zookeeper Coordinator, and
-failover node . Each of the nodes performs the same tasks but
-processes different dataset(s) [fa18-523-56-www-nifi-homepagetechdoc].
+failover node [@fa18-523-56-www-nifi-homepagetechdoc] . Each of the 
+nodes performs the same tasks but processes different dataset(s) 
+[@fa18-523-56-www-nifi-homepagetechdoc].
 
-![NiFi Cluster Architecture](images/nifi_clusters_architecture.PNG){#fig:nificlusterarchitecture}
+![NiFi Cluster Architecture [@fa18-523-56-www-nifi-homepagetechdoc]]
+(images/nifi_clusters_architecture.PNG){#fig:nificlusterarchitecture}
 
 ## NiFi Download, Installing and Getting Started
 
@@ -246,22 +252,25 @@ or *zip* file option for Windows, or Homebrew option for Mac
 
 *For Window*
 
-*Double-click* to run `run-nifi.bat` file from NiFi `bin` subfolder within the installed folder. 
+*Double-click* to run `run-nifi.bat` file from NiFi `bin` subfolder
+within the installed folder [@fa18-523-56-nifi-installation-page]. 
 
 *For Linux/Mac OS X Users*
 
 Use Terminal to run `bin/nifi.sh` . Application will run and will be
-shutdown when the command is terminated.
+shutdown when the command is terminated [@fa18-523-56-nifi-installation-page].
 
 *NiFi as a Service in Linux and Max OS X*
 
 To install NiFi as a Service, run the command `bin/nifi.sh install
-<service_name>`. Without specifying specific `<service_name>`, nifi
-service name will be defaulted to *nifi*.
+<service_name>` [@fa18-523-56-nifi-installation-page]. Without 
+specifying specific `<service_name>`, nifi service name will be 
+defaulted to *nifi* [@fa18-523-56-nifi-installation-page].
 
 To start NiFi service after installation, run sudo `service
-<service_name> start` . To stop, run `sudo service <service_name>
-stop`
+<service_name> start` [@fa18-523-56-nifi-installation-page].
+To stop, run `sudo service <service_name> stop` 
+[@fa18-523-56-nifi-installation-page].
 
 Once NiFi has been started, the GUI can be accessed using web browser
 via <http://localhost:8080/nifi> . The port and host name can be
